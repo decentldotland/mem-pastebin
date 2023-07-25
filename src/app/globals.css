@@ -1,13 +1,14 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
+  --margin-left: auto;
+  --margin-right: auto;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-color: white;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -39,6 +40,8 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 }
+
+.wrap {width: 500px; margin: 0 auto; margin-top: 5em;}
 
 @media (prefers-color-scheme: dark) {
   :root {
