@@ -108,3 +108,13 @@ a {
     color-scheme: dark;
   }
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
