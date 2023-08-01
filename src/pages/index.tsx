@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 
 export default function PasteBin() {
@@ -42,6 +42,7 @@ export default function PasteBin() {
     const handleSubmission = async () => {
 
         if(input.length > 0) {
+
             const loader = toast.loading('Submitting');
             const result = await submitToApi()
             const memState = result.data.execution.state.logs
@@ -63,8 +64,6 @@ export default function PasteBin() {
                 toast.error("There was an issue. Please try again.")
 
             }
-
-            console.log("rr: ", result)
 
         } else {
 

@@ -1,10 +1,6 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
 import "@/styles/globals.css";
-import { queryClient } from "../lib/react-query";
 import { Toaster } from "react-hot-toast";
 
 function MEM({ Component, pageProps }: AppProps) {
@@ -17,21 +13,17 @@ function MEM({ Component, pageProps }: AppProps) {
                     content={`A sample project to test MEM`}
                 />
             </Head>
-
-            <QueryClientProvider client={queryClient}>
-                <ReactQueryDevtools />
-                <Toaster 
-                    toastOptions={{
-                        style: {
-                            backgroundColor: "#1a1a1a",
-                            color: "#fff"
-                        }
-                    }}
-                />
-                <main className={`overflow-x-hidden`}>
-                    <Component {...pageProps} />
-                </main>
-            </QueryClientProvider>
+            <Toaster 
+                toastOptions={{
+                    style: {
+                        backgroundColor: "#1a1a1a",
+                        color: "#fff"
+                    }
+                }}
+            />
+            <main className={`overflow-x-hidden`}>
+                <Component {...pageProps} />
+            </main>
         </>
     );
 }
